@@ -336,7 +336,7 @@ class Document(BaseValidatable, BaseFileObject):  # pylint: disable=R0902
         :return: added :class:`~doorstop.core.item.Item`
 
         """
-        number = max(number or 0, self.next_number)
+        number = number or 0
         log.debug("next number: {}".format(number))
         try:
             last = self.items[-1]
