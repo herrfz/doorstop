@@ -336,7 +336,7 @@ class Document(BaseValidatable, BaseFileObject):  # pylint: disable=R0902
         :return: added :class:`~doorstop.core.item.Item`
 
         """
-        number = number or 0
+        number = number or 0 # here automatic numbering of new requirement is disabled 
         log.debug("next number: {}".format(number))
         try:
             last = self.items[-1]
